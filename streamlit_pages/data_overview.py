@@ -161,9 +161,13 @@ def show_data_overview():
     
     with col1:
         # Sample timeline data
+        months = pd.date_range('2016-09-01', '2018-10-01', freq='M')
+        num_months = len(months)
+        orders = np.random.randint(1000, 8000, num_months) + np.linspace(1000, 7000, num_months).astype(int)
+        
         timeline_data = {
-            'Month': pd.date_range('2016-09-01', '2018-10-01', freq='M'),
-            'Orders': np.random.randint(1000, 8000, 26) + np.linspace(1000, 7000, 26).astype(int)
+            'Month': months,
+            'Orders': orders
         }
         timeline_df = pd.DataFrame(timeline_data)
         
