@@ -1,0 +1,47 @@
+2025-08-16 22:16:59,278 - enhanced_main - INFO - Starting Enhanced Olist Review Score Prediction Pipeline with Advanced Visualizations...
+2025-08-16 22:16:59,278 - enhanced_main - INFO - ==================================================
+2025-08-16 22:16:59,278 - enhanced_main - INFO - STEP 1: DATA LOADING
+2025-08-16 22:16:59,278 - enhanced_main - INFO - ==================================================
+2025-08-16 22:17:00,118 - enhanced_main - INFO - ==================================================
+2025-08-16 22:17:00,118 - enhanced_main - INFO - STEP 2: DATA QUALITY ANALYSIS
+2025-08-16 22:17:00,118 - enhanced_main - INFO - ==================================================
+2025-08-16 22:17:01,425 - enhanced_main - INFO - Data quality analysis completed (skipping JSON save)
+2025-08-16 22:17:01,425 - enhanced_main - INFO - ==================================================
+2025-08-16 22:17:01,425 - enhanced_main - INFO - STEP 3: DATA PREPROCESSING
+2025-08-16 22:17:01,425 - enhanced_main - INFO - ==================================================
+2025-08-16 22:17:20,714 - enhanced_main - INFO - Master dataset created: (99224, 44)
+2025-08-16 22:17:21,071 - enhanced_main - INFO - Processed dataset ready: (94750, 57)
+2025-08-16 22:17:21,071 - enhanced_main - INFO - Preprocessing completed (skipping JSON save)
+2025-08-16 22:17:21,071 - enhanced_main - INFO - ==================================================
+2025-08-16 22:17:21,071 - enhanced_main - INFO - STEP 4: FEATURE ENGINEERING
+2025-08-16 22:17:21,071 - enhanced_main - INFO - ==================================================
+2025-08-16 22:17:21,106 - enhanced_main - INFO - Feature engineering complete: (94750, 95)
+2025-08-16 22:17:21,106 - enhanced_main - INFO - Feature descriptions obtained
+2025-08-16 22:17:21,106 - enhanced_main - INFO - ==================================================
+2025-08-16 22:17:21,106 - enhanced_main - INFO - STEP 5: MODEL TRAINING
+2025-08-16 22:17:21,106 - enhanced_main - INFO - ==================================================
+2025-08-16 22:17:35,763 - enhanced_main - INFO - ==================================================
+2025-08-16 22:17:35,764 - enhanced_main - INFO - STEP 6: MODEL EVALUATION
+2025-08-16 22:17:35,764 - enhanced_main - INFO - ==================================================
+2025-08-16 22:17:36,186 - enhanced_main - INFO - Model evaluation completed
+2025-08-16 22:17:36,186 - enhanced_main - INFO - ==================================================
+2025-08-16 22:17:36,186 - enhanced_main - INFO - STEP 7: GENERATING ADVANCED VISUALIZATIONS
+2025-08-16 22:17:36,186 - enhanced_main - INFO - ==================================================
+2025-08-16 22:17:37,017 - enhanced_main - INFO - Generated 16 interactive charts for enhanced report
+2025-08-16 22:17:37,017 - enhanced_main - INFO - ==================================================
+2025-08-16 22:17:37,017 - enhanced_main - INFO - STEP 8: GENERATING ENHANCED HTML REPORT
+2025-08-16 22:17:37,017 - enhanced_main - INFO - ==================================================
+2025-08-16 22:17:37,580 - enhanced_main - INFO - Enhanced HTML report with visualizations generated: /Users/suman/Documents/ZenoHealth2/output/enhanced_review_prediction_report.html
+2025-08-16 22:17:37,580 - enhanced_main - INFO - Enhanced results prepared for HTML report
+2025-08-16 22:17:37,581 - enhanced_main - INFO - ==================================================
+2025-08-16 22:17:37,581 - enhanced_main - INFO - ENHANCED PIPELINE EXECUTION SUMMARY
+2025-08-16 22:17:37,581 - enhanced_main - INFO - ==================================================
+2025-08-16 22:17:37,581 - enhanced_main - INFO - Best Model: xgboost
+2025-08-16 22:17:37,581 - enhanced_main - INFO - Test Accuracy: 0.8040
+2025-08-16 22:17:37,581 - enhanced_main - INFO - Test AUC-ROC: 0.6645
+2025-08-16 22:17:37,581 - enhanced_main - INFO - F1-Score: 0.8885
+2025-08-16 22:17:37,581 - enhanced_main - INFO - Data Quality Issues Found: 7
+2025-08-16 22:17:37,581 - enhanced_main - INFO - Data Retention Rate: 95.5%
+2025-08-16 22:17:37,581 - enhanced_main - INFO - Features Engineered: 38
+2025-08-16 22:17:37,581 - enhanced_main - INFO - Interactive Charts Generated: 16
+2025-08-16 22:17:37,581 - enhanced_main - INFO - Enhanced pipeline execution completed successfully!

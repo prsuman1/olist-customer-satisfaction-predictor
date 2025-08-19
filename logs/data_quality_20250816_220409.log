@@ -1,0 +1,11 @@
+2025-08-16 22:04:11,491 - data_quality - INFO - Starting comprehensive data quality analysis...
+2025-08-16 22:04:11,491 - data_quality - INFO - Analyzing dataset: customers
+2025-08-16 22:04:11,639 - data_quality - INFO - Analyzing dataset: geolocation
+2025-08-16 22:04:12,230 - data_quality - INFO - Analyzing dataset: order_items
+2025-08-16 22:04:12,375 - data_quality - INFO - Analyzing dataset: order_payments
+2025-08-16 22:04:12,457 - data_quality - INFO - Analyzing dataset: order_reviews
+2025-08-16 22:04:12,619 - data_quality - INFO - Analyzing dataset: orders
+2025-08-16 22:04:12,759 - data_quality - INFO - Analyzing dataset: products
+2025-08-16 22:04:12,794 - data_quality - INFO - Analyzing dataset: sellers
+2025-08-16 22:04:12,800 - data_quality - INFO - Analyzing dataset: product_translation
+2025-08-16 22:04:12,802 - data_quality - INFO - Analyzing cross-dataset relationships...

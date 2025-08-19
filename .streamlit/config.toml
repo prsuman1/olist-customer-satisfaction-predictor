@@ -1,0 +1,45 @@
+[global]
+# If false, makes your Streamlit script not run until you explicitly click a button in the browser.
+developmentMode = false
+
+# Show error details in a modal dialog.
+showErrorDetails = true
+
+[server]
+# List of folders that should not be watched for changes. 
+fileWatcherType = "auto"
+
+# If false, will attempt to open a new tab in your default web browser.
+headless = false
+
+# The port where the server will listen for client and browser connections.
+port = 8501
+
+# The IP address where the server will listen for client and browser connections.
+address = "0.0.0.0"
+
+# Whether to enable CORS protection (required for some deployments)
+enableCORS = true
+
+# Whether to enable XSRF protection
+enableXsrfProtection = true
+
+[browser]
+# Whether to show the toolbar in the top-right corner
+gatherUsageStats = false
+
+[theme]
+# Primary accent color for interactive elements.
+primaryColor = "#667eea"
+
+# Background color for the main content area.
+backgroundColor = "#FFFFFF"
+
+# Background color used for the sidebar and most interactive widgets.
+secondaryBackgroundColor = "#f0f2f6"
+
+# Color used for almost all text.
+textColor = "#262730"
+
+# Font family for all text in Streamlit apps.
+font = "sans serif"

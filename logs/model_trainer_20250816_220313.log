@@ -1,0 +1,19 @@
+2025-08-16 22:03:36,792 - model_trainer - INFO - Preparing data for model training...
+2025-08-16 22:03:36,799 - model_trainer - INFO - Feature count: 94
+2025-08-16 22:03:36,800 - model_trainer - INFO - Target distribution: {1: 0.7892981530343008, 0: 0.2107018469656992}
+2025-08-16 22:03:36,831 - model_trainer - INFO - Training set: (75800, 94), Test set: (18950, 94)
+2025-08-16 22:03:36,841 - model_trainer - INFO - Numeric features: 94, Categorical features: 0
+2025-08-16 22:03:36,905 - model_trainer - INFO - Training all models...
+2025-08-16 22:03:36,905 - model_trainer - INFO - Setting up ML models...
+2025-08-16 22:03:36,905 - model_trainer - INFO - Setup 3 models: ['logistic_regression', 'random_forest', 'xgboost']
+2025-08-16 22:03:36,905 - model_trainer - INFO - Training logistic_regression...
+2025-08-16 22:03:42,456 - model_trainer - INFO - logistic_regression - Test Accuracy: 0.6292, AUC: 0.6502
+2025-08-16 22:03:42,456 - model_trainer - INFO - Training random_forest...
+2025-08-16 22:03:50,126 - model_trainer - INFO - random_forest - Test Accuracy: 0.7190, AUC: 0.6431
+2025-08-16 22:03:50,127 - model_trainer - INFO - Training xgboost...
+2025-08-16 22:03:52,443 - model_trainer - INFO - xgboost - Test Accuracy: 0.8040, AUC: 0.6645
+2025-08-16 22:03:52,443 - model_trainer - INFO - Training complete. Best model: xgboost
+2025-08-16 22:03:52,445 - model_trainer - INFO - Saved logistic_regression to /Users/suman/Documents/ZenoHealth2/output/model_artifacts/logistic_regression.joblib
+2025-08-16 22:03:52,463 - model_trainer - INFO - Saved random_forest to /Users/suman/Documents/ZenoHealth2/output/model_artifacts/random_forest.joblib
+2025-08-16 22:03:52,465 - model_trainer - INFO - Saved xgboost to /Users/suman/Documents/ZenoHealth2/output/model_artifacts/xgboost.joblib
+2025-08-16 22:03:52,472 - model_trainer - INFO - All artifacts saved to /Users/suman/Documents/ZenoHealth2/output/model_artifacts

@@ -1,0 +1,34 @@
+2025-08-16 22:02:14,515 - enhanced_main - INFO - Starting Enhanced Olist Review Score Prediction Pipeline with Advanced Visualizations...
+2025-08-16 22:02:14,515 - enhanced_main - INFO - ==================================================
+2025-08-16 22:02:14,515 - enhanced_main - INFO - STEP 1: DATA LOADING
+2025-08-16 22:02:14,515 - enhanced_main - INFO - ==================================================
+2025-08-16 22:02:15,368 - enhanced_main - INFO - ==================================================
+2025-08-16 22:02:15,368 - enhanced_main - INFO - STEP 2: DATA QUALITY ANALYSIS
+2025-08-16 22:02:15,368 - enhanced_main - INFO - ==================================================
+2025-08-16 22:02:16,670 - enhanced_main - INFO - Data quality analysis completed (skipping JSON save)
+2025-08-16 22:02:16,671 - enhanced_main - INFO - ==================================================
+2025-08-16 22:02:16,671 - enhanced_main - INFO - STEP 3: DATA PREPROCESSING
+2025-08-16 22:02:16,671 - enhanced_main - INFO - ==================================================
+2025-08-16 22:02:37,173 - enhanced_main - INFO - Master dataset created: (99224, 44)
+2025-08-16 22:02:37,558 - enhanced_main - INFO - Processed dataset ready: (94750, 57)
+2025-08-16 22:02:37,558 - enhanced_main - INFO - Preprocessing completed (skipping JSON save)
+2025-08-16 22:02:37,558 - enhanced_main - INFO - ==================================================
+2025-08-16 22:02:37,558 - enhanced_main - INFO - STEP 4: FEATURE ENGINEERING
+2025-08-16 22:02:37,558 - enhanced_main - INFO - ==================================================
+2025-08-16 22:02:37,591 - enhanced_main - INFO - Feature engineering complete: (94750, 95)
+2025-08-16 22:02:37,591 - enhanced_main - INFO - Feature descriptions obtained
+2025-08-16 22:02:37,591 - enhanced_main - INFO - ==================================================
+2025-08-16 22:02:37,592 - enhanced_main - INFO - STEP 5: MODEL TRAINING
+2025-08-16 22:02:37,592 - enhanced_main - INFO - ==================================================
+2025-08-16 22:02:53,046 - enhanced_main - INFO - ==================================================
+2025-08-16 22:02:53,046 - enhanced_main - INFO - STEP 6: MODEL EVALUATION
+2025-08-16 22:02:53,046 - enhanced_main - INFO - ==================================================
+2025-08-16 22:02:53,370 - enhanced_main - INFO - Model evaluation completed
+2025-08-16 22:02:53,370 - enhanced_main - INFO - ==================================================
+2025-08-16 22:02:53,370 - enhanced_main - INFO - STEP 7: GENERATING ADVANCED VISUALIZATIONS
+2025-08-16 22:02:53,370 - enhanced_main - INFO - ==================================================
+2025-08-16 22:02:54,222 - enhanced_main - INFO - Generated 16 interactive charts for enhanced report
+2025-08-16 22:02:54,222 - enhanced_main - INFO - ==================================================
+2025-08-16 22:02:54,222 - enhanced_main - INFO - STEP 8: GENERATING ENHANCED HTML REPORT
+2025-08-16 22:02:54,222 - enhanced_main - INFO - ==================================================
+2025-08-16 22:02:54,223 - enhanced_main - ERROR - Enhanced pipeline execution failed: __init__() got an unexpected keyword argument 'charts'

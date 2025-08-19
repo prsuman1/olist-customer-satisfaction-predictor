@@ -1,0 +1,8 @@
+2025-08-16 19:16:18,759 - simple_main - INFO - Starting Simplified Olist Review Score Prediction Pipeline...
+2025-08-16 19:16:18,759 - simple_main - INFO - STEP 1: DATA LOADING
+2025-08-16 19:16:19,622 - simple_main - INFO - STEP 2: DATA QUALITY ANALYSIS
+2025-08-16 19:16:20,944 - simple_main - INFO - STEP 3: DATA PREPROCESSING
+2025-08-16 19:16:40,347 - simple_main - INFO - Master dataset created: (99224, 44)
+2025-08-16 19:16:40,705 - simple_main - INFO - Processed dataset ready: (94750, 57)
+2025-08-16 19:16:40,705 - simple_main - INFO - STEP 4: FEATURE ENGINEERING
+2025-08-16 19:16:40,718 - simple_main - ERROR - Pipeline execution failed: Cannot convert float NaN to integer

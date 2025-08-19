@@ -1,0 +1,14 @@
+2025-08-16 22:17:01,425 - preprocessor - INFO - Creating master dataset through strategic joins...
+2025-08-16 22:17:01,427 - preprocessor - INFO - Base orders dataset: (99441, 8)
+2025-08-16 22:17:01,451 - preprocessor - INFO - After joining reviews (target): (99224, 9)
+2025-08-16 22:17:01,475 - preprocessor - INFO - After joining customers: (99224, 13)
+2025-08-16 22:17:01,573 - preprocessor - INFO - After joining aggregated items: (99224, 24)
+2025-08-16 22:17:07,602 - preprocessor - INFO - After joining aggregated payments: (99224, 31)
+2025-08-16 22:17:13,568 - preprocessor - INFO - After joining seller features: (99224, 33)
+2025-08-16 22:17:19,472 - preprocessor - INFO - After joining product features: (99224, 41)
+2025-08-16 22:17:20,710 - preprocessor - INFO - Final master dataset: (99224, 44)
+2025-08-16 22:17:20,714 - preprocessor - INFO - Starting ML preprocessing...
+2025-08-16 22:17:20,720 - preprocessor - INFO - Handling missing values using exclusion approach...
+2025-08-16 22:17:20,747 - preprocessor - INFO - Dropped 759 rows with missing critical values
+2025-08-16 22:17:20,774 - preprocessor - INFO - Final exclusion: 3715 rows with any missing values
+2025-08-16 22:17:21,070 - preprocessor - INFO - Preprocessing complete: 99224 -> 94750 rows (4.5% excluded)

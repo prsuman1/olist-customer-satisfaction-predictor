@@ -1,0 +1,9 @@
+2025-08-16 22:40:52,521 - preprocessor - INFO - Creating master dataset through strategic joins...
+2025-08-16 22:40:52,524 - preprocessor - INFO - Base orders dataset: (99441, 8)
+2025-08-16 22:40:52,545 - preprocessor - INFO - After joining reviews (target): (99224, 9)
+2025-08-16 22:40:52,575 - preprocessor - INFO - After joining customers: (99224, 13)
+2025-08-16 22:40:52,671 - preprocessor - INFO - After joining aggregated items: (99224, 24)
+2025-08-16 22:40:58,610 - preprocessor - INFO - After joining aggregated payments: (99224, 31)
+2025-08-16 22:41:04,514 - preprocessor - INFO - After joining seller features: (99224, 33)
+2025-08-16 22:41:10,398 - preprocessor - INFO - After joining product features: (99224, 41)
+2025-08-16 22:41:11,623 - preprocessor - INFO - Final master dataset: (99224, 44)

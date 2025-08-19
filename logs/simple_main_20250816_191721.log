@@ -1,0 +1,20 @@
+2025-08-16 19:17:21,324 - simple_main - INFO - Starting Simplified Olist Review Score Prediction Pipeline...
+2025-08-16 19:17:21,324 - simple_main - INFO - STEP 1: DATA LOADING
+2025-08-16 19:17:22,189 - simple_main - INFO - STEP 2: DATA QUALITY ANALYSIS
+2025-08-16 19:17:23,493 - simple_main - INFO - STEP 3: DATA PREPROCESSING
+2025-08-16 19:17:42,822 - simple_main - INFO - Master dataset created: (99224, 44)
+2025-08-16 19:17:43,176 - simple_main - INFO - Processed dataset ready: (94750, 57)
+2025-08-16 19:17:43,176 - simple_main - INFO - STEP 4: FEATURE ENGINEERING
+2025-08-16 19:17:43,209 - simple_main - INFO - Feature engineering complete: (94750, 95)
+2025-08-16 19:17:43,209 - simple_main - INFO - STEP 5: MODEL TRAINING
+2025-08-16 19:17:58,191 - simple_main - INFO - STEP 6: MODEL EVALUATION
+2025-08-16 19:17:58,564 - simple_main - INFO - STEP 7: GENERATING HTML REPORT
+2025-08-16 19:17:58,566 - simple_main - INFO - Generating comprehensive HTML report...
+2025-08-16 19:17:58,569 - simple_main - INFO - HTML report generated successfully: /Users/suman/Documents/ZenoHealth2/output/review_prediction_report.html
+2025-08-16 19:17:58,569 - simple_main - INFO - PIPELINE EXECUTION SUMMARY
+2025-08-16 19:17:58,569 - simple_main - INFO - Best Model: xgboost
+2025-08-16 19:17:58,569 - simple_main - INFO - Test Accuracy: 0.8040
+2025-08-16 19:17:58,569 - simple_main - INFO - Test AUC-ROC: 0.6645
+2025-08-16 19:17:58,569 - simple_main - INFO - F1-Score: 0.8885
+2025-08-16 19:17:58,569 - simple_main - INFO - Features Engineered: 38
+2025-08-16 19:17:58,569 - simple_main - INFO - Pipeline execution completed successfully!

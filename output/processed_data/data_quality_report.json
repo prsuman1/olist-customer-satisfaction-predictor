@@ -1,0 +1,21 @@
+{
+  "quality_report": {
+    "customers": {
+      "basic_stats": {
+        "shape": [
+          99441,
+          5
+        ],
+        "memory_usage_mb": 29.6210994720459,
+        "duplicate_rows": "0"
+      },
+      "missing_values": {
+        "total_missing_cells": "0",
+        "missing_percentage_overall": 0.0,
+        "columns_with_missing": {},
+        "missing_percentages": {},
+        "completely_missing_columns": []
+      },
+      "data_types": {
+        "type_distribution": {
+          
