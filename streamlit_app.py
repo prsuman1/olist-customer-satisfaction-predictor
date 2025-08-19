@@ -20,6 +20,16 @@ from pathlib import Path
 import warnings
 warnings.filterwarnings('ignore')
 
+# Import page functions
+from streamlit_pages.data_overview import show_data_overview
+from streamlit_pages.data_quality import show_data_quality
+from streamlit_pages.eda import show_eda
+from streamlit_pages.feature_engineering import show_feature_engineering
+from streamlit_pages.model_performance import show_model_performance
+from streamlit_pages.business_insights import show_business_insights
+from streamlit_pages.prediction import show_prediction
+from streamlit_pages.technical import show_technical_details
+
 # Configure Streamlit page
 st.set_page_config(
     page_title="🛒 Olist Review Prediction Dashboard",
@@ -144,24 +154,36 @@ def main():
     """)
     
     # Route to selected page
-    if page_key == "home":
-        show_home_page()
-    elif page_key == "data_overview":
-        show_data_overview()
-    elif page_key == "data_quality":
-        show_data_quality()
-    elif page_key == "eda":
-        show_eda()
-    elif page_key == "feature_engineering":
-        show_feature_engineering()
-    elif page_key == "model_performance":
-        show_model_performance()
-    elif page_key == "business_insights":
-        show_business_insights()
-    elif page_key == "prediction":
-        show_prediction()
-    elif page_key == "technical":
-        show_technical_details()
+    try:
+        if page_key == "home":
+            show_home_page()
+        elif page_key == "data_overview":
+            show_data_overview()
+        elif page_key == "data_quality":
+            show_data_quality()
+        elif page_key == "eda":
+            show_eda()
+        elif page_key == "feature_engineering":
+            show_feature_engineering()
+        elif page_key == "model_performance":
+            show_model_performance()
+        elif page_key == "business_insights":
+            show_business_insights()
+        elif page_key == "prediction":
+            show_prediction()
+        elif page_key == "technical":
+            show_technical_details()
+    except Exception as e:
+        st.error(f"Error loading page: {str(e)}")
+        st.markdown("### 🔧 Troubleshooting")
+        st.markdown("""
+        If you're seeing this error, please try:
+        1. Refreshing the page
+        2. Selecting a different page from the sidebar
+        3. Checking your internet connection
+        
+        **Error details:** `{}`
+        """.format(str(e)))
 
 def show_home_page():
     """Display the home page with project overview."""
@@ -272,15 +294,6 @@ def show_home_page():
         </div>
         """, unsafe_allow_html=True)
 
-# Import other page functions
-from streamlit_pages.data_overview import show_data_overview
-from streamlit_pages.data_quality import show_data_quality
-from streamlit_pages.eda import show_eda
-from streamlit_pages.feature_engineering import show_feature_engineering
-from streamlit_pages.model_performance import show_model_performance
-from streamlit_pages.business_insights import show_business_insights
-from streamlit_pages.prediction import show_prediction
-from streamlit_pages.technical import show_technical_details
 
 if __name__ == "__main__":
     main()
