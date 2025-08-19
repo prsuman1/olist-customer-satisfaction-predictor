@@ -160,10 +160,14 @@ def show_data_overview():
     col1, col2 = st.columns(2)
     
     with col1:
-        # Sample timeline data
+        # Sample timeline data - using fixed data for cloud stability
         months = pd.date_range('2016-09-01', '2018-10-01', freq='M')
         num_months = len(months)
-        orders = np.random.randint(1000, 8000, num_months) + np.linspace(1000, 7000, num_months).astype(int)
+        # Fixed sample data instead of random
+        base_orders = [2500, 2800, 3200, 3500, 4200, 4800, 5200, 5800, 6100, 6400, 
+                      6800, 7200, 5900, 6200, 6600, 7000, 7300, 7600, 6800, 7100, 
+                      7400, 7700, 6200, 6500, 6800]
+        orders = base_orders[:num_months]
         
         timeline_data = {
             'Month': months,
