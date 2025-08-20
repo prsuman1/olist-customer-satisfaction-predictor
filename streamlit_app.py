@@ -53,23 +53,28 @@ st.markdown("""
     }
     
     .metric-card {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        padding: 1rem;
-        border-radius: 10px;
+        background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+        padding: 1.5rem;
+        border-radius: 12px;
         color: white;
         text-align: center;
         margin: 0.5rem 0;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        border: 1px solid rgba(255,255,255,0.1);
     }
     
     .metric-value {
-        font-size: 2rem;
-        font-weight: bold;
+        font-size: 2.2rem;
+        font-weight: 700;
         margin-bottom: 0.5rem;
+        text-shadow: 0 1px 2px rgba(0,0,0,0.2);
     }
     
     .metric-label {
-        font-size: 0.9rem;
-        opacity: 0.9;
+        font-size: 1rem;
+        opacity: 1;
+        font-weight: 500;
+        text-shadow: 0 1px 2px rgba(0,0,0,0.2);
     }
     
     .sidebar-section {
@@ -80,19 +85,47 @@ st.markdown("""
     }
     
     .insights-box {
-        background: #e8f5e8;
-        padding: 1rem;
+        background: #ffffff;
+        padding: 1.5rem;
         border-radius: 10px;
         border-left: 5px solid #28a745;
         margin: 1rem 0;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        color: #2c3e50;
+    }
+    
+    .insights-box h4 {
+        color: #28a745;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+    }
+    
+    .insights-box p {
+        color: #495057;
+        line-height: 1.6;
+        margin-bottom: 0;
     }
     
     .warning-box {
-        background: #fff3cd;
-        padding: 1rem;
+        background: #ffffff;
+        padding: 1.5rem;
         border-radius: 10px;
         border-left: 5px solid #ffc107;
         margin: 1rem 0;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        color: #2c3e50;
+    }
+    
+    .warning-box h4 {
+        color: #ffc107;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+    }
+    
+    .warning-box p {
+        color: #495057;
+        line-height: 1.6;
+        margin-bottom: 0;
     }
 </style>
 """, unsafe_allow_html=True)
