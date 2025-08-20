@@ -883,35 +883,33 @@ def show_recommendations():
     st.markdown("---")
     st.markdown("### 🎯 Final Strategic Recommendations")
     
-    st.markdown("""
-    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; border-radius: 15px; margin: 2rem 0;">
-        <h3>🏆 Executive Summary & Call to Action</h3>
-        <p style="font-size: 1.1em; margin: 1rem 0;">
-            The customer satisfaction prediction model represents a <strong>R$ 2.3M annual revenue opportunity</strong> 
-            with a <strong>340% first-year ROI</strong>. Implementation should begin immediately with a focused pilot program.
-        </p>
-        
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
-            <div>
-                <h4>✅ Key Success Factors</h4>
-                <ul>
-                    <li>Strong executive sponsorship secured</li>
-                    <li>Cross-functional team assembled</li>
-                    <li>Phased implementation approach</li>
-                    <li>Continuous performance monitoring</li>
-                    <li>Customer-centric intervention design</li>
-                </ul>
-            </div>
-            <div>
-                <h4>🎯 Critical Next Steps</h4>
-                <ul>
-                    <li>Approve pilot program budget (R$ 150K)</li>
-                    <li>Assemble core implementation team</li>
-                    <li>Begin infrastructure setup</li>
-                    <li>Define pilot success criteria</li>
-                    <li>Start stakeholder change management</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
+    # Executive Summary
+    st.info("""
+    ### 🏆 Executive Summary & Call to Action
+    
+    The customer satisfaction prediction model represents a **R$ 2.3M annual revenue opportunity** 
+    with a **340% first-year ROI**. Implementation should begin immediately with a focused pilot program.
+    """)
+    
+    # Action items
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        st.success("""
+        #### ✅ Key Success Factors
+        - Strong executive sponsorship secured
+        - Cross-functional team assembled  
+        - Phased implementation approach
+        - Continuous performance monitoring
+        - Customer-centric intervention design
+        """)
+    
+    with col2:
+        st.warning("""
+        #### 🎯 Critical Next Steps
+        - Approve pilot program budget (R$ 150K)
+        - Assemble core implementation team
+        - Begin infrastructure setup
+        - Define pilot success criteria
+        - Start stakeholder change management
+        """)

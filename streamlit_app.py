@@ -127,6 +127,70 @@ st.markdown("""
         line-height: 1.6;
         margin-bottom: 0;
     }
+    
+    /* Additional styling for content boxes */
+    .success-box {
+        background: #ffffff;
+        padding: 1.5rem;
+        border-radius: 10px;
+        border-left: 5px solid #28a745;
+        margin: 1rem 0;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        color: #2c3e50;
+    }
+    
+    .success-box h4 {
+        color: #28a745;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+    }
+    
+    .success-box ul, .success-box li {
+        color: #495057;
+        line-height: 1.6;
+    }
+    
+    .info-box {
+        background: #ffffff;
+        padding: 1.5rem;
+        border-radius: 10px;
+        border-left: 5px solid #17a2b8;
+        margin: 1rem 0;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        color: #2c3e50;
+    }
+    
+    .info-box h4 {
+        color: #17a2b8;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+    }
+    
+    .info-box ul, .info-box li {
+        color: #495057;
+        line-height: 1.6;
+    }
+    
+    .danger-box {
+        background: #ffffff;
+        padding: 1.5rem;
+        border-radius: 10px;
+        border-left: 5px solid #dc3545;
+        margin: 1rem 0;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        color: #2c3e50;
+    }
+    
+    .danger-box h4 {
+        color: #dc3545;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+    }
+    
+    .danger-box ul, .danger-box li {
+        color: #495057;
+        line-height: 1.6;
+    }
 </style>
 """, unsafe_allow_html=True)
 

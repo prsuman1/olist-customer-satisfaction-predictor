@@ -113,9 +113,10 @@ def show_data_overview():
         fig.add_trace(go.Scatter(
             x=[x], y=[y],
             mode='markers+text',
-            marker=dict(size=30, color='lightblue', line=dict(width=2)),
+            marker=dict(size=40, color='#4a90e2', line=dict(width=2, color='#2c3e50')),
             text=node,
             textposition="middle center",
+            textfont=dict(size=12, color='white', family='Arial Black'),
             name=node,
             showlegend=False
         ))
@@ -138,8 +139,9 @@ def show_data_overview():
         fig.add_trace(go.Scatter(
             x=[x0, x1], y=[y0, y1],
             mode='lines',
-            line=dict(color='gray', width=2),
-            showlegend=False
+            line=dict(color='#6c757d', width=3),
+            showlegend=False,
+            hoverinfo='skip'
         ))
     
     fig.update_layout(
