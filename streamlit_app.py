@@ -192,39 +192,53 @@ st.markdown("""
         line-height: 1.6;
     }
     
-    /* Fix problematic light backgrounds - make them darker with white text */
-    div[style*="#e8f5e8"] {
-        background: #155724 !important;
-        color: #ffffff !important;
-        border-left: 5px solid #28a745 !important;
+    /* Nuclear option - force ALL divs with problematic backgrounds */
+    div[style*="e8f5e8"] {
+        background-color: #ffffff !important;
+        color: #000000 !important;
     }
     
-    div[style*="#fff3cd"] {
-        background: #856404 !important;
-        color: #ffffff !important;
-        border-left: 5px solid #ffc107 !important;
+    div[style*="fff3cd"] {
+        background-color: #ffffff !important;
+        color: #000000 !important;
     }
     
-    div[style*="#d1ecf1"] {
-        background: #0c5460 !important;
-        color: #ffffff !important;
-        border-left: 5px solid #17a2b8 !important;
+    div[style*="d1ecf1"] {
+        background-color: #ffffff !important;
+        color: #000000 !important;
     }
     
-    /* Ensure all text in these boxes is white and visible */
-    div[style*="#e8f5e8"] *,
-    div[style*="#fff3cd"] *,
-    div[style*="#d1ecf1"] * {
-        color: #ffffff !important;
+    /* Force all child elements to be black */
+    div[style*="e8f5e8"] h4,
+    div[style*="e8f5e8"] p,
+    div[style*="e8f5e8"] li,
+    div[style*="e8f5e8"] ul,
+    div[style*="e8f5e8"] span,
+    div[style*="e8f5e8"] strong,
+    div[style*="fff3cd"] h4,
+    div[style*="fff3cd"] p,
+    div[style*="fff3cd"] li,
+    div[style*="fff3cd"] ul,
+    div[style*="fff3cd"] span,
+    div[style*="fff3cd"] strong,
+    div[style*="d1ecf1"] h4,
+    div[style*="d1ecf1"] p,
+    div[style*="d1ecf1"] li,
+    div[style*="d1ecf1"] ul,
+    div[style*="d1ecf1"] span,
+    div[style*="d1ecf1"] strong {
+        color: #000000 !important;
+        background: transparent !important;
     }
     
-    /* Headers in these boxes */
-    div[style*="#e8f5e8"] h4,
-    div[style*="#fff3cd"] h4,
-    div[style*="#d1ecf1"] h4 {
-        color: #ffffff !important;
-        font-weight: 700 !important;
-        margin-bottom: 0.75rem !important;
+    /* Override everything */
+    .stMarkdown div[style*="background"] {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+    }
+    
+    .stMarkdown div[style*="background"] * {
+        color: #000000 !important;
     }
 </style>
 """, unsafe_allow_html=True)
