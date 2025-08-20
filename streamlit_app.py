@@ -38,33 +38,6 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Force light mode theme
-st.markdown("""
-<style>
-    /* Force light theme */
-    .stApp {
-        background-color: #ffffff;
-        color: #262730;
-    }
-    
-    /* Sidebar light theme */
-    .css-1d391kg {
-        background-color: #f0f2f6;
-    }
-    
-    /* Main content area */
-    .main .block-container {
-        background-color: #ffffff;
-        color: #262730;
-    }
-    
-    /* Override any dark backgrounds */
-    .stApp > div {
-        background-color: #ffffff;
-    }
-</style>
-""", unsafe_allow_html=True)
-
 # Custom CSS for better styling
 st.markdown("""
 <style>
@@ -219,22 +192,39 @@ st.markdown("""
         line-height: 1.6;
     }
     
-    /* Ensure content boxes work well in light mode */
-    div[style*="background"] {
-        color: #262730 !important;
+    /* Fix problematic light backgrounds - make them darker with white text */
+    div[style*="#e8f5e8"] {
+        background: #155724 !important;
+        color: #ffffff !important;
+        border-left: 5px solid #28a745 !important;
     }
     
-    div[style*="background"] h4 {
-        font-weight: 600 !important;
-        margin-bottom: 0.5rem !important;
+    div[style*="#fff3cd"] {
+        background: #856404 !important;
+        color: #ffffff !important;
+        border-left: 5px solid #ffc107 !important;
     }
     
-    div[style*="background"] ul,
-    div[style*="background"] li,
-    div[style*="background"] p,
-    div[style*="background"] span {
-        color: #262730 !important;
-        line-height: 1.6 !important;
+    div[style*="#d1ecf1"] {
+        background: #0c5460 !important;
+        color: #ffffff !important;
+        border-left: 5px solid #17a2b8 !important;
+    }
+    
+    /* Ensure all text in these boxes is white and visible */
+    div[style*="#e8f5e8"] *,
+    div[style*="#fff3cd"] *,
+    div[style*="#d1ecf1"] * {
+        color: #ffffff !important;
+    }
+    
+    /* Headers in these boxes */
+    div[style*="#e8f5e8"] h4,
+    div[style*="#fff3cd"] h4,
+    div[style*="#d1ecf1"] h4 {
+        color: #ffffff !important;
+        font-weight: 700 !important;
+        margin-bottom: 0.75rem !important;
     }
 </style>
 """, unsafe_allow_html=True)
