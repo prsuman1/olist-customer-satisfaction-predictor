@@ -1,8 +1,0 @@
-2025-08-16 19:13:47,563 - main - INFO - Starting Olist Review Score Prediction Pipeline...
-2025-08-16 19:13:47,563 - main - INFO - ==================================================
-2025-08-16 19:13:47,563 - main - INFO - STEP 1: DATA LOADING
-2025-08-16 19:13:47,563 - main - INFO - ==================================================
-2025-08-16 19:13:48,401 - main - INFO - ==================================================
-2025-08-16 19:13:48,401 - main - INFO - STEP 2: DATA QUALITY ANALYSIS
-2025-08-16 19:13:48,401 - main - INFO - ==================================================
-2025-08-16 19:13:49,704 - main - ERROR - Pipeline execution failed: keys must be str, int, float, bool or None, not dtype[object_]

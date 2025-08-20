@@ -1,4 +1,0 @@
-2025-08-16 19:04:47,708 - model_trainer - INFO - Preparing data for model training...
-2025-08-16 19:04:47,708 - model_trainer - INFO - Feature count: 89
-2025-08-16 19:04:47,709 - model_trainer - INFO - Target distribution: {1: 0.598, 0: 0.402}
-2025-08-16 19:04:47,710 - model_trainer - INFO - Training set: (800, 89), Test set: (200, 89)

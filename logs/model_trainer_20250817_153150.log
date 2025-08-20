@@ -1,7 +1,0 @@
-2025-08-17 15:32:10,960 - model_trainer - INFO - Preparing data for model training...
-2025-08-17 15:32:10,968 - model_trainer - INFO - Feature count: 94
-2025-08-17 15:32:10,969 - model_trainer - INFO - Target distribution: {1: 0.7892981530343008, 0: 0.2107018469656992}
-2025-08-17 15:32:11,001 - model_trainer - INFO - Training set: (75800, 94), Test set: (18950, 94)
-2025-08-17 15:32:11,018 - model_trainer - INFO - Numeric features: 94, Categorical features: 0
-2025-08-17 15:32:11,103 - model_trainer - INFO - Setting up ML models...
-2025-08-17 15:32:11,103 - model_trainer - INFO - Setup 3 models: ['logistic_regression', 'random_forest', 'xgboost']
