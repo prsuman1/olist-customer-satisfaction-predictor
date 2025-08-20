@@ -192,74 +192,78 @@ st.markdown("""
         line-height: 1.6;
     }
     
-    /* Global override for problematic inline styles */
-    div[style*="background: #e8f5e8"], 
-    div[style*="background:#e8f5e8"] {
+    /* Global override for ALL problematic background colors */
+    div[style*="#e8f5e8"],
+    div[style*="#fff3cd"], 
+    div[style*="#d1ecf1"],
+    div[style*="#f8d7da"],
+    div[style*="#d4edda"] {
         background: #ffffff !important;
         color: #2c3e50 !important;
         box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+        border: 1px solid #e9ecef !important;
     }
     
-    div[style*="background: #e8f5e8"] h4,
-    div[style*="background:#e8f5e8"] h4 {
+    /* Headers in content boxes */
+    div[style*="#e8f5e8"] h4,
+    div[style*="#d4edda"] h4 {
         color: #28a745 !important;
         font-weight: 600 !important;
+        margin-bottom: 0.5rem !important;
     }
     
-    div[style*="background: #e8f5e8"] ul,
-    div[style*="background: #e8f5e8"] li,
-    div[style*="background: #e8f5e8"] p,
-    div[style*="background:#e8f5e8"] ul,
-    div[style*="background:#e8f5e8"] li,
-    div[style*="background:#e8f5e8"] p {
-        color: #495057 !important;
-        line-height: 1.6 !important;
-    }
-    
-    div[style*="background: #fff3cd"],
-    div[style*="background:#fff3cd"] {
-        background: #ffffff !important;
-        color: #2c3e50 !important;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
-    }
-    
-    div[style*="background: #fff3cd"] h4,
-    div[style*="background:#fff3cd"] h4 {
-        color: #ffc107 !important;
+    div[style*="#fff3cd"] h4 {
+        color: #856404 !important;
         font-weight: 600 !important;
+        margin-bottom: 0.5rem !important;
     }
     
-    div[style*="background: #fff3cd"] ul,
-    div[style*="background: #fff3cd"] li,
-    div[style*="background: #fff3cd"] p,
-    div[style*="background:#fff3cd"] ul,
-    div[style*="background:#fff3cd"] li,
-    div[style*="background:#fff3cd"] p {
-        color: #495057 !important;
-        line-height: 1.6 !important;
-    }
-    
-    div[style*="background: #d1ecf1"],
-    div[style*="background:#d1ecf1"] {
-        background: #ffffff !important;
-        color: #2c3e50 !important;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
-    }
-    
-    div[style*="background: #d1ecf1"] h4,
-    div[style*="background:#d1ecf1"] h4 {
-        color: #17a2b8 !important;
+    div[style*="#d1ecf1"] h4 {
+        color: #0c5460 !important;
         font-weight: 600 !important;
+        margin-bottom: 0.5rem !important;
     }
     
-    div[style*="background: #d1ecf1"] ul,
-    div[style*="background: #d1ecf1"] li,
-    div[style*="background: #d1ecf1"] p,
-    div[style*="background:#d1ecf1"] ul,
-    div[style*="background:#d1ecf1"] li,
-    div[style*="background:#d1ecf1"] p {
+    div[style*="#f8d7da"] h4 {
+        color: #721c24 !important;
+        font-weight: 600 !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    /* All text content in boxes */
+    div[style*="#e8f5e8"] ul,
+    div[style*="#e8f5e8"] li,
+    div[style*="#e8f5e8"] p,
+    div[style*="#e8f5e8"] span,
+    div[style*="#e8f5e8"] strong,
+    div[style*="#fff3cd"] ul,
+    div[style*="#fff3cd"] li,
+    div[style*="#fff3cd"] p,
+    div[style*="#fff3cd"] span,
+    div[style*="#fff3cd"] strong,
+    div[style*="#d1ecf1"] ul,
+    div[style*="#d1ecf1"] li,
+    div[style*="#d1ecf1"] p,
+    div[style*="#d1ecf1"] span,
+    div[style*="#d1ecf1"] strong,
+    div[style*="#f8d7da"] ul,
+    div[style*="#f8d7da"] li,
+    div[style*="#f8d7da"] p,
+    div[style*="#f8d7da"] span,
+    div[style*="#f8d7da"] strong,
+    div[style*="#d4edda"] ul,
+    div[style*="#d4edda"] li,
+    div[style*="#d4edda"] p,
+    div[style*="#d4edda"] span,
+    div[style*="#d4edda"] strong {
         color: #495057 !important;
         line-height: 1.6 !important;
+        font-weight: normal !important;
+    }
+    
+    /* Ensure all content is visible */
+    div[style*="background"] * {
+        color: inherit !important;
     }
 </style>
 """, unsafe_allow_html=True)
