@@ -191,6 +191,76 @@ st.markdown("""
         color: #495057;
         line-height: 1.6;
     }
+    
+    /* Global override for problematic inline styles */
+    div[style*="background: #e8f5e8"], 
+    div[style*="background:#e8f5e8"] {
+        background: #ffffff !important;
+        color: #2c3e50 !important;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+    }
+    
+    div[style*="background: #e8f5e8"] h4,
+    div[style*="background:#e8f5e8"] h4 {
+        color: #28a745 !important;
+        font-weight: 600 !important;
+    }
+    
+    div[style*="background: #e8f5e8"] ul,
+    div[style*="background: #e8f5e8"] li,
+    div[style*="background: #e8f5e8"] p,
+    div[style*="background:#e8f5e8"] ul,
+    div[style*="background:#e8f5e8"] li,
+    div[style*="background:#e8f5e8"] p {
+        color: #495057 !important;
+        line-height: 1.6 !important;
+    }
+    
+    div[style*="background: #fff3cd"],
+    div[style*="background:#fff3cd"] {
+        background: #ffffff !important;
+        color: #2c3e50 !important;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+    }
+    
+    div[style*="background: #fff3cd"] h4,
+    div[style*="background:#fff3cd"] h4 {
+        color: #ffc107 !important;
+        font-weight: 600 !important;
+    }
+    
+    div[style*="background: #fff3cd"] ul,
+    div[style*="background: #fff3cd"] li,
+    div[style*="background: #fff3cd"] p,
+    div[style*="background:#fff3cd"] ul,
+    div[style*="background:#fff3cd"] li,
+    div[style*="background:#fff3cd"] p {
+        color: #495057 !important;
+        line-height: 1.6 !important;
+    }
+    
+    div[style*="background: #d1ecf1"],
+    div[style*="background:#d1ecf1"] {
+        background: #ffffff !important;
+        color: #2c3e50 !important;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+    }
+    
+    div[style*="background: #d1ecf1"] h4,
+    div[style*="background:#d1ecf1"] h4 {
+        color: #17a2b8 !important;
+        font-weight: 600 !important;
+    }
+    
+    div[style*="background: #d1ecf1"] ul,
+    div[style*="background: #d1ecf1"] li,
+    div[style*="background: #d1ecf1"] p,
+    div[style*="background:#d1ecf1"] ul,
+    div[style*="background:#d1ecf1"] li,
+    div[style*="background:#d1ecf1"] p {
+        color: #495057 !important;
+        line-height: 1.6 !important;
+    }
 </style>
 """, unsafe_allow_html=True)
 
