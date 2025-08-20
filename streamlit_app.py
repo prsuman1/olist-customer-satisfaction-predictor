@@ -28,6 +28,7 @@ from streamlit_pages.feature_engineering import show_feature_engineering
 from streamlit_pages.model_performance import show_model_performance
 from streamlit_pages.business_insights import show_business_insights
 from streamlit_pages.prediction import show_prediction
+from streamlit_pages.notebook import show_notebook
 from streamlit_pages.technical import show_technical_details
 
 # Configure Streamlit page
@@ -278,6 +279,7 @@ def main():
         "🤖 Model Performance": "model_performance",
         "💼 Business Insights": "business_insights",
         "🎯 Make Predictions": "prediction",
+        "📓 ML Notebook": "notebook",
         "📋 Technical Details": "technical"
     }
     
@@ -317,6 +319,8 @@ def main():
             show_business_insights()
         elif page_key == "prediction":
             show_prediction()
+        elif page_key == "notebook":
+            show_notebook()
         elif page_key == "technical":
             show_technical_details()
     except Exception as e:
