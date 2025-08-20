@@ -1,5 +1,12 @@
 """
-Robust Streamlit App with Error Handling
+🛒 Olist Review Score Prediction - Interactive Streamlit Dashboard
+================================================================
+
+A comprehensive machine learning dashboard for predicting customer review scores
+using the Olist Brazilian e-commerce dataset.
+
+Author: AI ML Pipeline
+Version: 2.0
 """
 
 import streamlit as st
@@ -11,72 +18,13 @@ from plotly.subplots import make_subplots
 import warnings
 warnings.filterwarnings('ignore')
 
-# Configure Streamlit page
+# Configure Streamlit page FIRST before any other Streamlit operations
 st.set_page_config(
     page_title="🛒 Olist Review Prediction Dashboard",
     page_icon="🛒",
     layout="wide",
     initial_sidebar_state="expanded"
 )
-
-# Try to import page functions with error handling
-page_functions = {}
-
-try:
-    from streamlit_pages.data_overview import show_data_overview
-    page_functions["data_overview"] = show_data_overview
-except Exception as e:
-    st.error(f"Failed to import data_overview: {e}")
-    page_functions["data_overview"] = None
-
-try:
-    from streamlit_pages.data_quality import show_data_quality
-    page_functions["data_quality"] = show_data_quality
-except Exception as e:
-    st.error(f"Failed to import data_quality: {e}")
-    page_functions["data_quality"] = None
-
-try:
-    from streamlit_pages.eda import show_eda
-    page_functions["eda"] = show_eda
-except Exception as e:
-    st.error(f"Failed to import eda: {e}")
-    page_functions["eda"] = None
-
-try:
-    from streamlit_pages.feature_engineering import show_feature_engineering
-    page_functions["feature_engineering"] = show_feature_engineering
-except Exception as e:
-    st.error(f"Failed to import feature_engineering: {e}")
-    page_functions["feature_engineering"] = None
-
-try:
-    from streamlit_pages.model_performance import show_model_performance
-    page_functions["model_performance"] = show_model_performance
-except Exception as e:
-    st.error(f"Failed to import model_performance: {e}")
-    page_functions["model_performance"] = None
-
-try:
-    from streamlit_pages.business_insights import show_business_insights
-    page_functions["business_insights"] = show_business_insights
-except Exception as e:
-    st.error(f"Failed to import business_insights: {e}")
-    page_functions["business_insights"] = None
-
-try:
-    from streamlit_pages.prediction import show_prediction
-    page_functions["prediction"] = show_prediction
-except Exception as e:
-    st.error(f"Failed to import prediction: {e}")
-    page_functions["prediction"] = None
-
-try:
-    from streamlit_pages.technical import show_technical_details
-    page_functions["technical"] = show_technical_details
-except Exception as e:
-    st.error(f"Failed to import technical: {e}")
-    page_functions["technical"] = None
 
 def main():
     """Main Streamlit application."""
@@ -119,28 +67,50 @@ def main():
     - 🎯 Real-time predictions
     """)
     
-    # Route to selected page with robust error handling
-    try:
-        if page_key == "home":
-            show_home_page()
-        else:
-            page_function = page_functions.get(page_key)
-            if page_function:
-                page_function()
-            else:
-                st.error(f"Page '{selected_page}' is currently unavailable due to an import error.")
-                st.info("Please try selecting a different page from the sidebar.")
-    except Exception as e:
-        st.error(f"Error loading page '{selected_page}': {str(e)}")
-        st.markdown("### 🔧 Troubleshooting")
-        st.markdown(f"""
-        If you're seeing this error, please try:
-        1. Refreshing the page
-        2. Selecting a different page from the sidebar
-        3. Checking your internet connection
-        
-        **Error details:** `{str(e)}`
-        """)
+    # Route to selected page
+    if page_key == "home":
+        show_home_page()
+    else:
+        # Try to import and run the selected page
+        try:
+            if page_key == "data_overview":
+                from streamlit_pages.data_overview import show_data_overview
+                show_data_overview()
+            elif page_key == "data_quality":
+                from streamlit_pages.data_quality import show_data_quality
+                show_data_quality()
+            elif page_key == "eda":
+                from streamlit_pages.eda import show_eda
+                show_eda()
+            elif page_key == "feature_engineering":
+                from streamlit_pages.feature_engineering import show_feature_engineering
+                show_feature_engineering()
+            elif page_key == "model_performance":
+                from streamlit_pages.model_performance import show_model_performance
+                show_model_performance()
+            elif page_key == "business_insights":
+                from streamlit_pages.business_insights import show_business_insights
+                show_business_insights()
+            elif page_key == "prediction":
+                from streamlit_pages.prediction import show_prediction
+                show_prediction()
+            elif page_key == "technical":
+                from streamlit_pages.technical import show_technical_details
+                show_technical_details()
+        except ImportError as e:
+            st.error(f"⚠️ Unable to load {selected_page}")
+            st.info(f"Error details: {str(e)}")
+            st.markdown("""
+            ### 🔧 Troubleshooting
+            
+            This page is currently unavailable. Please try:
+            1. Selecting a different page from the sidebar
+            2. Refreshing the application
+            3. Checking the console for error details
+            """)
+        except Exception as e:
+            st.error(f"❌ Error in {selected_page}")
+            st.info(f"Error details: {str(e)}")
 
 def show_home_page():
     """Display the home page with project overview."""
@@ -212,6 +182,42 @@ def show_home_page():
         <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 1rem; border-radius: 10px; color: white; text-align: center; margin: 0.5rem 0;">
             <div style="font-size: 2rem; font-weight: bold; margin-bottom: 0.5rem;">80.4%</div>
             <div style="font-size: 0.9rem; opacity: 0.9;">Best Accuracy</div>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    # Getting started section
+    st.markdown("---")
+    st.markdown("### 🚀 Getting Started")
+    
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        st.markdown("""
+        <div style="background: #e8f5e8; padding: 1rem; border-radius: 10px; border-left: 5px solid #28a745; margin: 1rem 0;">
+            <h4>📊 Explore the Data</h4>
+            <p>Start with <strong>Data Overview</strong> to understand the Brazilian e-commerce dataset structure and key statistics.</p>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        st.markdown("""
+        <div style="background: #e8f5e8; padding: 1rem; border-radius: 10px; border-left: 5px solid #28a745; margin: 1rem 0;">
+            <h4>🤖 Review Models</h4>
+            <p>Check <strong>Model Performance</strong> to see how different algorithms compare in predicting customer satisfaction.</p>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    with col2:
+        st.markdown("""
+        <div style="background: #e8f5e8; padding: 1rem; border-radius: 10px; border-left: 5px solid #28a745; margin: 1rem 0;">
+            <h4>💼 Business Value</h4>
+            <p>Visit <strong>Business Insights</strong> to understand the practical applications and ROI potential.</p>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        st.markdown("""
+        <div style="background: #e8f5e8; padding: 1rem; border-radius: 10px; border-left: 5px solid #28a745; margin: 1rem 0;">
+            <h4>🎯 Try Predictions</h4>
+            <p>Use <strong>Make Predictions</strong> to test the model with custom order characteristics.</p>
         </div>
         """, unsafe_allow_html=True)
 
