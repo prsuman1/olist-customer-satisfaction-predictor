@@ -38,6 +38,33 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+# Force light mode theme
+st.markdown("""
+<style>
+    /* Force light theme */
+    .stApp {
+        background-color: #ffffff;
+        color: #262730;
+    }
+    
+    /* Sidebar light theme */
+    .css-1d391kg {
+        background-color: #f0f2f6;
+    }
+    
+    /* Main content area */
+    .main .block-container {
+        background-color: #ffffff;
+        color: #262730;
+    }
+    
+    /* Override any dark backgrounds */
+    .stApp > div {
+        background-color: #ffffff;
+    }
+</style>
+""", unsafe_allow_html=True)
+
 # Custom CSS for better styling
 st.markdown("""
 <style>
@@ -192,78 +219,22 @@ st.markdown("""
         line-height: 1.6;
     }
     
-    /* Global override for ALL problematic background colors */
-    div[style*="#e8f5e8"],
-    div[style*="#fff3cd"], 
-    div[style*="#d1ecf1"],
-    div[style*="#f8d7da"],
-    div[style*="#d4edda"] {
-        background: #ffffff !important;
-        color: #2c3e50 !important;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
-        border: 1px solid #e9ecef !important;
+    /* Ensure content boxes work well in light mode */
+    div[style*="background"] {
+        color: #262730 !important;
     }
     
-    /* Headers in content boxes */
-    div[style*="#e8f5e8"] h4,
-    div[style*="#d4edda"] h4 {
-        color: #28a745 !important;
+    div[style*="background"] h4 {
         font-weight: 600 !important;
         margin-bottom: 0.5rem !important;
     }
     
-    div[style*="#fff3cd"] h4 {
-        color: #856404 !important;
-        font-weight: 600 !important;
-        margin-bottom: 0.5rem !important;
-    }
-    
-    div[style*="#d1ecf1"] h4 {
-        color: #0c5460 !important;
-        font-weight: 600 !important;
-        margin-bottom: 0.5rem !important;
-    }
-    
-    div[style*="#f8d7da"] h4 {
-        color: #721c24 !important;
-        font-weight: 600 !important;
-        margin-bottom: 0.5rem !important;
-    }
-    
-    /* All text content in boxes */
-    div[style*="#e8f5e8"] ul,
-    div[style*="#e8f5e8"] li,
-    div[style*="#e8f5e8"] p,
-    div[style*="#e8f5e8"] span,
-    div[style*="#e8f5e8"] strong,
-    div[style*="#fff3cd"] ul,
-    div[style*="#fff3cd"] li,
-    div[style*="#fff3cd"] p,
-    div[style*="#fff3cd"] span,
-    div[style*="#fff3cd"] strong,
-    div[style*="#d1ecf1"] ul,
-    div[style*="#d1ecf1"] li,
-    div[style*="#d1ecf1"] p,
-    div[style*="#d1ecf1"] span,
-    div[style*="#d1ecf1"] strong,
-    div[style*="#f8d7da"] ul,
-    div[style*="#f8d7da"] li,
-    div[style*="#f8d7da"] p,
-    div[style*="#f8d7da"] span,
-    div[style*="#f8d7da"] strong,
-    div[style*="#d4edda"] ul,
-    div[style*="#d4edda"] li,
-    div[style*="#d4edda"] p,
-    div[style*="#d4edda"] span,
-    div[style*="#d4edda"] strong {
-        color: #495057 !important;
+    div[style*="background"] ul,
+    div[style*="background"] li,
+    div[style*="background"] p,
+    div[style*="background"] span {
+        color: #262730 !important;
         line-height: 1.6 !important;
-        font-weight: normal !important;
-    }
-    
-    /* Ensure all content is visible */
-    div[style*="background"] * {
-        color: inherit !important;
     }
 </style>
 """, unsafe_allow_html=True)
